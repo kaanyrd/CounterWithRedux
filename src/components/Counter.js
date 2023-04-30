@@ -5,8 +5,8 @@ import { useForm } from "react-hook-form";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import classes from "./Counter.module.css";
-import Switch from "@mui/material/Switch";
 import { themeActions } from "../store/theme";
+import MaterialUISwitch from "./UI/SwitchBtn";
 
 function Counter() {
   const {
@@ -47,18 +47,18 @@ function Counter() {
     <div className={theme ? classes.app : classes.active}>
       <span className={classes.changeThemeBtn}>
         {/* <button>Change Theme</button> */}
-        <Switch
+        <MaterialUISwitch
           onClick={changeThemeFunc}
           inputProps={{ "aria-label": "controlled" }}
           color="warning"
         />
       </span>
-      <div>
+      <div className={classes.counter}>
         <h1>Counter: {counter}</h1>
       </div>
       <div>
         <TextField
-          {...register("amount", { min: -100, max: 100 })}
+          {...register("amount", { min: -100, max: 100, maxLength: 3 })}
           fullWidth
           label="Amount"
           id="fullWidth"

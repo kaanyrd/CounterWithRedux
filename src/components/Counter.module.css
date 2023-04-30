@@ -1,4 +1,6 @@
 .app {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   padding-top: 4rem;
   /* border: 3px solid black; */
   display: grid;
@@ -12,6 +14,8 @@
   background-color: #d5d6d7;
 }
 .active {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   transition: all 0.5s linear;
   padding-top: 4rem;
   /* border: 3px solid black; */
@@ -22,12 +26,13 @@
   place-items: center;
   align-content: flex-start;
   min-height: 100vh;
-  background-color: #7e7e7e;
+  background-color: #929292;
 }
 .errors {
-  color: red;
-  animation-name: deneme;
+  color: black;
+  animation-name: errorAnimation;
   animation-duration: 0.5s;
+  font-size: 1.4rem;
 }
 .changeThemeBtn {
   position: absolute;
@@ -51,7 +56,10 @@
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   width: 10rem;
 }
-@keyframes deneme {
+.counter {
+  font-size: 1.3rem;
+}
+@keyframes errorAnimation {
   0% {
     opacity: 0;
   }
