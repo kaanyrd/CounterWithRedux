@@ -1,0 +1,61 @@
+.app {
+  padding-top: 4rem;
+  /* border: 3px solid black; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  row-gap: 1rem;
+  place-items: center;
+  align-content: flex-start;
+  min-height: 100vh;
+  transition: all 0.5s linear;
+  background-color: #d5d6d7;
+}
+.active {
+  transition: all 0.5s linear;
+  padding-top: 4rem;
+  /* border: 3px solid black; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  row-gap: 1rem;
+  place-items: center;
+  align-content: flex-start;
+  min-height: 100vh;
+  background-color: #7e7e7e;
+}
+.errors {
+  color: red;
+  animation-name: deneme;
+  animation-duration: 0.5s;
+}
+.changeThemeBtn {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+.showBtn {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  /* border: 3px solid black; */
+}
+.buttons > * {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  width: 10rem;
+}
+@keyframes deneme {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
