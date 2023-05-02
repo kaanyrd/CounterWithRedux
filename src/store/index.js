@@ -3,7 +3,7 @@ import counterActions from "./counter";
 import themeActions from "./theme";
 
 const store = configureStore({
-  reducer: { counter: counterActions, toggle: themeActions },
+  reducer: { counter: counterActions.reducer, theme: themeActions.reducer },
 });
 
 export default store;

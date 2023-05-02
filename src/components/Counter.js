@@ -23,7 +23,7 @@ function Counter() {
 
   const dispatch = useDispatch();
   const counter = useSelector((state) => state.counter.counter);
-  const theme = useSelector((state) => state.toggle.theme);
+  const theme = useSelector((state) => state.theme.theme);
 
   const incrementFunc = (data) => {
     // console.log(data);
